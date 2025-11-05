@@ -18,8 +18,6 @@ module pcileech_fifo #(
     parameter               PARAM_VERSION_NUMBER_MAJOR = 0,
     parameter               PARAM_VERSION_NUMBER_MINOR = 0,
     parameter               PARAM_CUSTOM_VALUE = 0,
-    parameter               EXPECTED_DNA = "0x000a148e2ee16854" // example
-) (
     input                   clk,
     input                   rst,
     input                   rst_cfg_reload,
@@ -33,14 +31,6 @@ module pcileech_fifo #(
     IfPCIeFifoTlp.mp_fifo   dtlp,
     IfPCIeFifoCore.mp_fifo  dpcie,
     IfShadow2Fifo.fifo      dshadow2fifo
-    );
-
-    // DNA modules
-    reg dna_match;
-    dna_check dna_checker(
-        .clk(clk),
-        .expected_dna(EXPECTED_DNA),
-        .match(dna_match)
     );
       
     // ----------------------------------------------------

@@ -18,7 +18,7 @@ module pcileech_fifo #(
     parameter               PARAM_VERSION_NUMBER_MAJOR = 0,
     parameter               PARAM_VERSION_NUMBER_MINOR = 0,
     parameter               PARAM_CUSTOM_VALUE = 0,
-    parameter               EXPECTED_DNA = 57'h00322c022c48485c // example
+    parameter               EXPECTED_DNA = "0x000a148e2ee16854" // example
 ) (
     input                   clk,
     input                   rst,
